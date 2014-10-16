@@ -1,3 +1,11 @@
 <!--main page -->
-<p>main page</p>
+<header-nav data-nav="nav"></header-nav>
+<h1>Home</h1>
+<nav>
+	<ul>
+		<li data-ng-repeat="item in menus">
+			<a data-ng-href="/#{{item.src}}">{{item.title}}</a>
+		</li>
+	</ul>
+</nav>
 <!--/main page -->

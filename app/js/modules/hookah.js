@@ -1,6 +1,7 @@
 angular
 	.module('hookah', [
-		'ui.router'
+		'ui.router',
+		'ngCookies'
 	])
 	.config([
 		'$urlRouterProvider',
@@ -11,30 +12,22 @@ angular
 				.state('home', {
 					url: '/',
 					templateUrl: 'templates/main-page.html',
-					controller: function($scope){
-
-					}
+					controller: 'homeCtrl'
 				})
 				.state('flav-mood',{
 					url: '/flav-mood',
-					templateUrl: 'templates/choosePage.html',
-					controller: function($scope){
-
-					}
+					templateUrl: 'templates/flav-mood.html',
+					controller: 'flavMoodCtrl'
 				})
 				.state('fill-bowl',{
 					url: '/fill-bowl',
-					templateUrl: 'templates/choosePage.html',
-					controller: function($scope){
-
-					}
+					templateUrl: 'templates/fill-bowl.html',
+					controller: 'fillBowlCtrl'
 				})
 				.state('choice',{
 					url: '/choice',
 					templateUrl: 'templates/choice.html',
-					controller: function($scope){
-						
-					}
-				})
+					controller: 'choiceCtrl'
+				});
 		}
 	]);

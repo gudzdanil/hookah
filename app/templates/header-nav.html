@@ -1,5 +1,3 @@
 <nav>
-	<div ng-class='nav-back' ng-show='backNavAvail()'>Back</div>
-	<div ng-class='nav-next' ng-show='nextNavAvail()'>Next</div>
-	<div ng-class='nav-save' ng-show='saveNavAvail()'>Save</div>
+	<a ng-repeat="item in nav" ng-class="{{item.pos}}" ng-click="save()" ng-href="{{item.link}}">{{item.title}}</a>
 </nav>

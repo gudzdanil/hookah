@@ -42,18 +42,19 @@ module.exports = function (grunt) {
             curly: true,
             eqeqeq: true,
             latedef:true,
-            newCap:true,
             nonbsp:true,
             undef:true,
             unused:true,
-            strict:true,
             asi:true,
             boss:true,
             lastsemic:true,
             multistr: true,
             notypeof: true,
             shadow:true,
-            sub: true
+            sub: true,
+            globals:{
+              "angular": true
+            }
           },
           files: [
             '<%= appDir %>/js/**/*.js'
@@ -68,10 +69,10 @@ module.exports = function (grunt) {
           files: [
             {
               expand: true,     // Enable dynamic expansion.
-              cwd: '<%= appDir %>/scss/',      // Src matches are relative to this path.
-              src: ['<%= appDir %>/**/*.js'], // Actual pattern(s) to match.
-              dest: '<%= appDir %>/css/',   // Destination path prefix.
-              ext: '.css',   // Dest filepaths will have this extension.
+              cwd: '<%= appDir %>/css/',      // Src matches are relative to this path.
+              src: ['*.scss'], // Actual pattern(s) to match.
+              dest: '<%= appDir %>/scss/',   // Destination path prefix.
+              ext: 'scss',   // Dest filepaths will have this extension.
               extDot: 'first'   // Extensions in filenames begin after the first dot
             }
           ]
@@ -89,6 +90,7 @@ module.exports = function (grunt) {
               '<%= appDir %>/templates/**/*.html',
               '<%= appDir %>/scss/**/*.scss',
               '<%= appDir %>/js/**/*.js',
+              '<%= appDir %>/data/**/*.json',
               '<%= appDir %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}'
             ], 
             tasks: ['jshint', 'sass'],

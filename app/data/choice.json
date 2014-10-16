@@ -1,0 +1,15 @@
+{
+	"nav": 
+			[
+				{
+					"title": "Back",
+					"pos": "left",
+					"link": "#/fill-bowl"
+				},
+				{
+					"title": "Save",
+					"pos": "right",
+					"link": "#/"
+				}
+			]
+}
