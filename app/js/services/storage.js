@@ -1,4 +1,5 @@
 angular
-	.factory('storage', function() {
-	    return {message: "I'm data from a service"}
-	})
+	.module('hookah')
+	.factory('storageService', function() {
+	    return {};
+	});

@@ -1,2 +1,7 @@
-<header-nav data-nav="nav"/>
+<header-nav data-nav="nav"></header-nav>
 <h1>Here is your choice!</h1>
+<ul>
+	<li ng-repeat="(title, value) in data">
+		<strong>{{title}}</strong><span>{{value}}</span>
+	</li>
+</ul>

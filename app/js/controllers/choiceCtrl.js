@@ -1,11 +1,10 @@
 angular
 	.module('hookah')
-	.controller('choiceCtrl', ["$scope", "$http", 'flavMoodCtrl', 'fillBowlCtrl', function($scope, $http, flavMoodCtrl, fillBowlCtrl){
+	.controller('choiceCtrl', ["$scope", "$http", 'storageService', function($scope, $http, store){
 		$http
 			.get('/data/choice.json')
 			.then(function(res){
 				$scope.nav = res.data.nav;
 			});
-			console.log(flavMoodCtrl)
-			console.log(fillBowlCtrl)
+			$scope.data = store;
 	}]);

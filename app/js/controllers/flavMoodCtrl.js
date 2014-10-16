@@ -4,6 +4,6 @@ angular
 		$http.get('data/flav-mood.json')
 	       .then(function(res){
 	          	$scope.lists = res.data.lists; 
-	          	$scope.nav = res.data.nav;     
+	          	$scope.nav = res.data.nav; 
 	        });
 	}]);
