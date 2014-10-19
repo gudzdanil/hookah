@@ -1,0 +1,11 @@
+{
+	"left": {
+		"title": "Back",
+		"link": "#/flav-mood"
+	},
+	"right": {
+		"title": "Next",
+		"link": "#/choice"
+	},
+	"title": "Please, choose"
+}

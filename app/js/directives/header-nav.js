@@ -1,11 +1,18 @@
 angular
 	.module('hookah')
-	.directive('headerNav', function(){
+	.directive('headerNav', ['storageService', function(store){
 		return {
 			restrict: "E",
 			templateUrl: '/templates/header-nav.html',
 			scope: {
-				nav: '='
+				page: '@'
+			},
+			link: function ($scope){
+				store.promises.navigation[$scope.page].then(function(nav){
+					$scope.left = nav.left;
+					$scope.right = nav.right;
+					$scope.title = nav.title;
+				});
 			}
 		}
-	});
+	}]);

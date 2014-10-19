@@ -1,7 +1,7 @@
-<header-nav data-nav="nav"></header-nav>
-<h1>Here is your choice!</h1>
+<header-nav page="choice"></header-nav>
+<h1>Your Hookah</h1>
 <ul>
-	<li ng-repeat="(title, value) in data">
-		<strong>{{title}}</strong><span>{{value}}</span>
+	<li ng-repeat="item in choice">
+		<strong>{{item.title}}</strong>:<span>{{item.value}}</span>
 	</li>
 </ul>

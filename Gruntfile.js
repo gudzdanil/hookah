@@ -62,20 +62,14 @@ module.exports = function (grunt) {
         },
 
         sass: {
-          options: {
-            check: true,
-            style: 'expanded'
-          },
-          files: [
-            {
-              expand: true,     // Enable dynamic expansion.
-              cwd: '<%= appDir %>/css/',      // Src matches are relative to this path.
-              src: ['*.scss'], // Actual pattern(s) to match.
-              dest: '<%= appDir %>/scss/',   // Destination path prefix.
-              ext: 'scss',   // Dest filepaths will have this extension.
-              extDot: 'first'   // Extensions in filenames begin after the first dot
+          develop:{
+            options: {
+              style: 'expanded'
+            },
+            files: {
+              '<%= appDir %>/css/main.css': '<%= appDir %>/scss/main.scss'
             }
-          ]
+          }
         },
 
         watch: {
@@ -93,7 +87,7 @@ module.exports = function (grunt) {
               '<%= appDir %>/data/**/*.json',
               '<%= appDir %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}'
             ], 
-            tasks: ['jshint', 'sass'],
+            tasks: ['jshint', 'sass:develop'],
             release: {
               tasks: ['jshint', 'concat:release', 'uglify:release']
             }

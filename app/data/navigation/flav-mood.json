@@ -1,0 +1,11 @@
+{
+	"left": {
+		"title": "Home",
+		"link": "/"
+	},
+	"right": {
+		"title": "Next",
+		"link": "#/fill-bowl"
+	},
+	"title": "Please, choose"
+}

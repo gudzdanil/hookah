@@ -1,0 +1,20 @@
+{
+	"nav": [
+		{
+			"title": "Make Hookah",
+			"src": "/flav-mood"
+		},
+		{
+			"title": "Add Hookah",
+			"src": "/add"
+		},
+		{
+			"title": "Share Hookah",
+			"src": "/share"
+		},
+		{
+			"title": "Places",
+			"src": "/places"
+		}
+	]
+}

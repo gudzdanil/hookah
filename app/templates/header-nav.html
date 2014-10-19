@@ -1,3 +1,5 @@
 <nav>
-	<a ng-repeat="item in nav" ng-class="{{item.pos}}" ng-click="save()" ng-href="{{item.link}}">{{item.title}}</a>
+	<a ng-href = "{{left.link}}" class = "nav_left">{{left.title}}</a>
+	<h2 class = "nav_title">{{title}}</h2>
+	<a ng-href = "{{right.link}}" class = "nav_right">{{right.title}}</a>
 </nav>

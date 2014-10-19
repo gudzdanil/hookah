@@ -1,0 +1,10 @@
+{
+	"left": {
+		"title": "Back",
+		"link": "#/fill-bowl" 
+	},
+	"right": {
+		"title": "Save"
+	},
+	"title": "Fusion"
+}

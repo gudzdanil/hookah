@@ -1,5 +1,11 @@
 angular
 	.module('hookah')
 	.factory('storageService', function() {
-	    return {};
+	    return {
+	    	selectedValues: {},
+	    	promises: {
+	    		navigation: {},
+	    		selects: {}
+	    	}
+	    };
 	});
